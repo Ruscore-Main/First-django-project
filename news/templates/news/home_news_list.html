@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Новости - {{title}}{% endblock title %}
+{% block title %}Новости - {{ block.super }}{% endblock title %}
 
 {% block sidebar %}
 {% include 'inc/_sidebar.html' %}
 {% endblock %}
 
 {% block content %}
-{% for item in news %}
+{% for item in object_list %}
 {% comment %}this is comment{% endcomment %}
 <div class="card text-center mb-5">
     <div class="card-header">
